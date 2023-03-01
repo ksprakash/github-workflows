@@ -1,0 +1,13 @@
+name: shell
+on: [push,pull_request]
+jobs: 
+   run-shell-commands:
+       runs-on: ubuntu-18.04
+       steps:
+          - name: ECHO A STRING
+            run: echo "Prakash"
+
+          - name: Multiline String 
+            run: |
+                 node -v
+                 npm -v
