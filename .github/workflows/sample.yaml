@@ -1,7 +1,7 @@
 name: shell
 on: [push,pull_request]
 jobs: 
-   run-shell-commands:
+    run-shell-commands:
        runs-on: ubuntu-18.04
        steps:
           - name: ECHO A STRING
@@ -11,3 +11,14 @@ jobs:
             run: |
                  node -v
                  npm -v
+
+    python-commands:
+       runs-on: ubuntu-18.04
+       steps:
+          - name: Run a Python Program 
+            run: python --version
+
+          - name: python commands
+            run: |
+                 #!/usr/bin/python3
+                 pip3 freeze
